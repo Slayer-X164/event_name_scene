@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+html,body{
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  overflow-x: hidden;
+}
+.canvas_container{
+  position: relative;
+  height: 100%;
+  width: 100vh;
+}
+.foreground_cover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+  font-size: 2rem;
+  color: aliceblue;
+}
+.event_name_container{
+  position: absolute;
+  top: 150px;
+  /* background-color: rgb(95, 58, 9); */
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.event_name{
+  color: #EDE9E9;
+  position: absolute;
+  text-align: center;
+  font-size: 3rem;
+  padding: 5px;
+}
+/* loader */
