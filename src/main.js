@@ -72,24 +72,34 @@ animate();
 
 
 //svg animation
-// SVG animation on scroll
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      // Reset the animation by removing and re-adding the class
+
       entry.target.querySelectorAll('path').forEach(path => {
         path.style.animation = 'none';
-        path.offsetHeight; // Trigger reflow
+        path.offsetHeight;
         path.style.animation = 'textAnimation 4s ease-in-out alternate forwards';
       });
     }
   });
 }, {
-  threshold: 0.5 // Trigger when 50% of element is visible
+  threshold: 0.5
 });
 
-// Observe the SVG container
 const eventNameContainer = document.querySelector('.event_name_container');
 if (eventNameContainer) {
   observer.observe(eventNameContainer);
 }
+//loader
+const preloader= ()=>{
+  const loaderContainer = document.querySelector('.loader-content')
+  const main = document.querySelector('main')
+
+  window.addEventListener("load",()=>{
+    loaderContainer.classList.add('hidden')
+    main.classList.add('visible')
+  })
+}
+preloader()

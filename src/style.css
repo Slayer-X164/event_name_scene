@@ -55,6 +55,47 @@ html,body{
   stroke-dashoffset: 300;
   /* animation: textAnimation 4s ease-in-out alternate forwards; */
 }
+
+.loader-content{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+main{
+  transition: opacity .5s ease-in-out;
+}
+.hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+.visible{
+  opacity: 1;
+  visibility: visible;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes textAnimation{
   0%{
     stroke-dashoffset: 300;
