@@ -19,7 +19,7 @@ scene.add(directionalLight);
 
 //gltf model loader
 const loader = new GLTFLoader();
-let model; // Declare model in wider scope to access in animate
+let model;
 loader.load(
   '/scene.gltf',
   function (gltf) {
@@ -63,7 +63,7 @@ window.addEventListener('resize', () => {
 function animate(){
   requestAnimationFrame(animate);
   if (model) {
-    model.rotation.y -= 0.003; // Add slow rotation
+    model.rotation.y -= 0.003;
   }
   controls.update();
   renderer.render(scene, camera);
@@ -80,7 +80,7 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.querySelectorAll('path').forEach(path => {
         path.style.animation = 'none';
         path.offsetHeight;
-        path.style.animation = 'textAnimation 4s ease-in-out alternate forwards';
+        path.style.animation = 'textAnimation 3s ease-in-out alternate forwards';
       });
     }
   });
